@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamour Studio | Professional Hair Styling</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Glamour Studio</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/book" class="btn-nav">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content animate-fade-up">
+            <h1>Experience True Elegance</h1>
+            <p>Premium hair styling services tailored just for you.</p>
+            <a href="/book" class="btn-primary">Book Appointment</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="container animate-fade-up delay-1">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Professional Care</h3>
+                <p>Expert stylists with years of experience.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Premium Products</h3>
+                <p>We only use the best products for your hair.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Relaxing Environment</h3>
+                <p>Enjoy a luxury experience while we work.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="container animate-fade-up delay-2" style="background: var(--bg-surface); padding: 3rem; border-radius: 8px;">
+        <h2>How It Works</h2>
+        <div class="features" style="text-align: center;">
+            <div>
+                <h3 style="font-size: 3rem; color: var(--primary-gold); margin-bottom: 0;">1</h3>
+                <p>Select Your Service</p>
+            </div>
+            <div>
+                <h3 style="font-size: 3rem; color: var(--primary-gold); margin-bottom: 0;">2</h3>
+                <p>Choose a Date & Time</p>
+            </div>
+            <div>
+                <h3 style="font-size: 3rem; color: var(--primary-gold); margin-bottom: 0;">3</h3>
+                <p>Get Confirmed Instantly</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Stylist (About) -->
+    <section class="container animate-fade-up delay-3" style="text-align: center;">
+        <h2>Meet Your Stylist</h2>
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; color: var(--text-muted);">
+            <p>
+                Welcome to Glamour Studio. I am <strong>Sarah</strong>, a certified hair specialist with over 7 years of experience in luxury wig installation and hair care. 
+                My mission is not just to style your hair, but to enhance your confidence and grace. 
+                Every appointment is a private, premium experience designed around you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Signature Service Section -->
+    <section class="container animate-fade-up delay-4">
+        <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Flawless Frontal Install" style="width: 100%; border-radius: 4px; box-shadow: var(--shadow-card);">
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Signature Service: Flawless Frontals</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem;">
+                    Our most requested service. We specialize in creating undetectable lace frontal installations that look and feel like your own hair. Using advanced techniques, we ensure a perfect melt, natural hairline, and long-lasting hold.
+                </p>
+                <a href="/services" class="btn-nav">Explore All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container animate-fade-up delay-5">
+        <h2>What Clients Say</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>"Absolutely Stunning"</h3>
+                <p>"The best frontal install I've ever had in Lagos. The lace was melted to perfection!"</p>
+                <p style="margin-top: 1rem; color: var(--primary-gold);">- Chioma A.</p>
+            </div>
+            <div class="feature-card">
+                <h3>"Worth Every Naira"</h3>
+                <p>"Professional, on time, and the studio is so relaxing. I felt like a queen."</p>
+                <p style="margin-top: 1rem; color: var(--primary-gold);">- Zainab O.</p>
+            </div>
+            <div class="feature-card">
+                <h3>"My Go-To Stylist"</h3>
+                <p>"I don't trust anyone else with my wigs. The revamp service brought my old hair back to life."</p>
+                <p style="margin-top: 1rem; color: var(--primary-gold);">- Tolu K.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reach Out Section -->
+    <section class="container animate-fade-up delay-5" style="text-align: center;">
+        <h2>Get In Touch</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem auto;">Have a question about a special event, bridal package, or collaboration? I'd love to hear from you.</p>
+        <a href="/book" class="btn-primary">Contact & Booking</a>
+    </section>
+
+    <!-- Whitelist Section -->
+    <section class="container animate-fade-up delay-6" style="text-align: center;">
+        <h2>Join Our Whitelist</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem auto;">Be the first to know about special offers, new services, and last-minute openings. Join our exclusive whitelist.</p>
+        <form id="whitelist-form" style="display: flex; justify-content: center; gap: 1rem; max-width: 500px; margin: 0 auto;">
+            <input type="email" name="email" placeholder="Enter your email" required style="flex-grow: 1; padding: 0.75rem; border: 1px solid var(--border-light); border-radius: 4px; background: var(--bg-surface); color: var(--text-primary);">
+            <button type="submit" class="btn-primary">Join Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Glamour Studio. All rights reserved.</p>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>

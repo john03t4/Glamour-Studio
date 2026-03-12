@@ -1,0 +1,1 @@
+now make it so i can send a mail to all the people in the whitelist through the admin page

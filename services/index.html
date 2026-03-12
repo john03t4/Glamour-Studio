@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Glamour Studio</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Glamour Studio</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services" class="active">Services</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/book" class="btn-nav">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h1>Our Services</h1>
+        <p>Choose the perfect style for you.</p>
+        
+        <!-- The JS will inject services here -->
+        <div id="services-container" class="services-grid">
+            <p>Loading services...</p>
+        </div>
+
+        <!-- Special Packages -->
+        <div style="margin-top: 4rem; text-align: center;">
+            <h2>Bridal & Special Occasions</h2>
+            <p style="max-width: 700px; margin: 0 auto; color: var(--text-muted);">
+                Planning for your big day? We offer exclusive bridal packages including consultation, trial styling, and on-site service. 
+                <a href="/book" style="color: var(--primary-gold); text-decoration: underline;">Contact us</a> for a custom quote.
+            </p>
+        </div>
+
+        <div style="margin-top: 5rem; border-top: 1px solid var(--border-light); padding-top: 3rem;">
+            <h2>Frequently Asked Questions</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Do I need to bring my own hair?</h3>
+                    <p style="color: var(--text-muted);">Yes, unless you have purchased a wig directly from our collection. Please ensure extensions are clean.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>How long does a frontal install take?</h3>
+                    <p style="color: var(--text-muted);">Typically 2 to 3 hours depending on the complexity of the style and customization required.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Can I reschedule?</h3>
+                    <p style="color: var(--text-muted);">Yes, you can reschedule up to 24 hours before your appointment time via the contact link.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/public/js/services.js"></script>
+</body>
+</html>

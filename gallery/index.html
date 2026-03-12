@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Glamour Studio</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Glamour Studio</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/gallery" class="active">Gallery</a></li>
+            <li><a href="/book" class="btn-nav">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h1>Our Work</h1>
+        <div class="gallery-grid">
+            <!-- Instagram Reel 1 -->
+            <div class="video-wrapper" onclick="openModal('https://www.instagram.com/reel/DTSGB2GjFox/embed')">
+                <div class="video-overlay"><div class="play-icon">▶</div></div>
+                <iframe src="https://www.instagram.com/reel/DTSGB2GjFox/embed" frameborder="0"></iframe>
+            </div>
+
+            <!-- Instagram Reel 2 -->
+            <div class="video-wrapper" onclick="openModal('https://www.instagram.com/reel/DTpLnFEDdAA/embed')">
+                <div class="video-overlay"><div class="play-icon">▶</div></div>
+                <iframe src="https://www.instagram.com/reel/DTpLnFEDdAA/embed" frameborder="0"></iframe>
+            </div>
+
+            <!-- Instagram Reel 3 -->
+            <div class="video-wrapper" onclick="openModal('https://www.instagram.com/reel/DTxKMWVjDkr/embed')">
+                <div class="video-overlay"><div class="play-icon">▶</div></div>
+                <iframe src="https://www.instagram.com/reel/DTxKMWVjDkr/embed" frameborder="0"></iframe>
+            </div>
+
+            <!-- Instagram Post 4 -->
+            <div class="video-wrapper" onclick="openModal('https://www.instagram.com/p/DUYRz2GjKQq/embed')">
+                <div class="video-overlay"><div class="play-icon">▶</div></div>
+                <iframe src="https://www.instagram.com/p/DUYRz2GjKQq/embed" frameborder="0"></iframe>
+            </div>
+
+            <!-- Instagram Reel 5 -->
+            <div class="video-wrapper" onclick="openModal('https://www.instagram.com/reel/DUEKwYDDPhy/embed')">
+                <div class="video-overlay"><div class="play-icon">▶</div></div>
+                <iframe src="https://www.instagram.com/reel/DUEKwYDDPhy/embed" frameborder="0"></iframe>
+            </div>
+
+            <!-- Instagram Reel 6 -->
+            <div class="video-wrapper" onclick="openModal('https://www.instagram.com/reel/DQj4ap1jCsE/embed')">
+                <div class="video-overlay"><div class="play-icon">▶</div></div>
+                <iframe src="https://www.instagram.com/reel/DQj4ap1jCsE/embed" frameborder="0"></iframe>
+            </div>
+
+            <!-- Instagram Reel 7 -->
+            <div class="video-wrapper" onclick="openModal('https://www.instagram.com/reel/DQzTCphDAme/embed')">
+                <div class="video-overlay"><div class="play-icon">▶</div></div>
+                <iframe src="https://www.instagram.com/reel/DQzTCphDAme/embed" frameborder="0"></iframe>
+            </div>
+
+            <!-- Instagram Reel 8 -->
+            <div class="video-wrapper" onclick="openModal('https://www.instagram.com/mo_tonii/reel/DH3LpuxIvA4/embed')">
+                <div class="video-overlay"><div class="play-icon">▶</div></div>
+                <iframe src="https://www.instagram.com/reel/DH3LpuxIvA4/embed" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <iframe id="modal-iframe" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openModal(url) {
+            document.getElementById('modal-iframe').src = url;
+            document.getElementById('video-modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('video-modal').style.display = 'none';
+            document.getElementById('modal-iframe').src = ''; // Stop video
+        }
+        // Close modal if clicked outside content
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('video-modal')) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>

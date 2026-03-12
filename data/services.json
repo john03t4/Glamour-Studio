@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Frontal Install",
+    "price": 45000,
+    "duration": 180
+  },
+  {
+    "id": 2,
+    "name": "Wig Revamp",
+    "price": 25000,
+    "duration": 120
+  }
+]

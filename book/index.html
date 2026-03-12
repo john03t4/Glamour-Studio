@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | Glamour Studio</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Glamour Studio</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/book" class="btn-nav active">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <section class="container booking-container">
+        <h1>Book Your Appointment</h1>
+        <p>Select a service and find an available time slot.</p>
+
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="service-select">Service</label style="color: #121212;">
+                <select id="service-select" name="serviceId" required>
+                    <option value="">Loading services...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="booking-date">Date</label>
+                <input type="date" id="booking-date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label>Available Time Slots</label>
+                <div id="slots-container">
+                    <p style="color: var(--text-muted);">Please select a service and date first.</p>
+                </div>
+            </div>
+            
+            <input type="hidden" id="selected-time" name="time" required>
+
+            <div style="border-top: 1px solid var(--border-light); margin-top: 2rem; padding-top: 2rem;">
+                <div class="form-group">
+                    <label for="user-name">Full Name</label>
+                    <input type="text" id="user-name" name="name" required placeholder="e.g., Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="user-phone">Phone Number</label>
+                    <input type="tel" id="user-phone" name="phone" required placeholder="e.g., 08012345678">
+                </div>
+                <div class="form-group">
+                    <label for="user-email">Email Address (Optional)</label>
+                    <input type="email" id="user-email" name="email" placeholder="e.g., jane@example.com">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Confirm Booking</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Glamour Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="/public/js/book.js"></script>
+</body>
+</html>

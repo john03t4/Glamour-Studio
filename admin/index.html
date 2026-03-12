@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Glamour Studio</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Glamour Studio [Admin]</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/book">Book Now</a></li>
+            <li><button id="logout-btn" class="btn-nav" style="display: none; background: transparent; border: 1px solid var(--accent-red); color: var(--accent-red); cursor: pointer;">Logout</button></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <!-- Login View -->
+        <div id="login-view" style="max-width: 400px; margin: 4rem auto; background: var(--bg-surface); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-light);">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Admin Login</h1>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="admin-email">Email</label>
+                    <input type="email" id="admin-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" name="password" required>
+                </div>
+                <button type="button" id="login-button" class="btn-primary" style="width: 100%; margin-top: 1rem;">Login</button>
+            </form>
+        </div>
+
+        <!-- Dashboard View (Hidden by default) -->
+        <div id="dashboard-view" style="display: none;">
+            <h1>Admin Dashboard</h1>
+
+            <!-- Stats Section -->
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <h3>Total Bookings</h3>
+                    <p id="stats-total-bookings">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Upcoming</h3>
+                    <p id="stats-upcoming-bookings">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Revenue</h3>
+                    <p id="stats-total-revenue">₦0</p>
+                </div>
+            </div>
+            
+            <!-- Email Section -->
+            <div id="email-section" style="margin-top: 4rem;">
+                <h2>Send Email to Whitelist</h2>
+                <div style="background: var(--bg-surface); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-light);">
+                    <form id="email-form">
+                        <div class="form-group">
+                            <label for="email-subject">Subject (Optional)</label>
+                            <input type="text" id="email-subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="email-message">Content</label>
+                            <textarea id="email-message" rows="8" required></textarea>
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center; gap: 10px; margin-top: 1rem; user-select: none;">
+                            <input type="checkbox" id="email-is-html" name="isHtml" style="width: auto; margin: 0;">
+                            <label for="email-is-html" style="margin-bottom: 0; font-weight: normal; cursor: pointer;">Send as HTML</label>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Send Email to All</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bookings Section -->
+            <div id="bookings-section" style="margin-top: 4rem;">
+                <h2>Current Bookings</h2>
+                <div id="bookings-table-container" style="overflow-x: auto;">
+                    <!-- Table will be injected here by admin.js -->
+                </div>
+            </div>
+
+            <!-- Whitelist Section -->
+            <div id="whitelist-section" style="margin-top: 5rem;">
+                <h2>Whitelist Subscribers</h2>
+                <div id="whitelist-container" style="background: var(--bg-surface); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-light);">
+                    <p>Loading subscribers...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Glamour Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="/public/js/admin.js"></script>
+</body>
+</html>
