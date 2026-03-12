@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Fetch and populate services
     async function populateServices() {
         try {
-            const response = await fetch('http://localhost:3000/api/services');
+            const response = await fetch('https://glamour-studio-1.onrender.com/api/services');
             const services = await response.json();
 
             serviceSelect.innerHTML = '<option value="">-- Select a Service --</option>';
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slotsContainer.innerHTML = '<p style="color: var(--text-muted);">Checking availability...</p>';
 
         try {
-            const response = await fetch(`http://localhost:3000/api/availability?serviceId=${serviceId}&date=${date}`);
+            const response = await fetch(`https://glamour-studio-1.onrender.com/api/availability?serviceId=${serviceId}&date=${date}`);
             const slots = await response.json();
             renderSlots(slots);
         } catch (error) {
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.textContent = 'Booking...';
 
         try {
-            const response = await fetch('http://localhost:3000/api/bookings', {
+            const response = await fetch('https://glamour-studio-1.onrender.com/api/bookings', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)

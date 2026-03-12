@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchServices() {
     try {
-        const response = await fetch('http://localhost:3000/api/services');
+        const response = await fetch('https://glamour-studio-1.onrender.com/api/services');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

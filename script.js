@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             button.textContent = 'Joining...';
 
             try {
-                const response = await fetch('http://localhost:3000/api/whitelist', {
+                const response = await fetch('https://glamour-studio-1.onrender.com/api/whitelist', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

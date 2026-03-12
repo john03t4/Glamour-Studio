@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookingsContainer = document.getElementById('bookings-table-container');
     const whitelistContainer = document.getElementById('whitelist-container');
 
-    const API_BASE = window.location.hostname === "127.0.0.1"
-    ? "http://127.0.0.1:3000"
-    : "http://localhost:3000";
+    const API_BASE = window.location.hostname === "https://glamour-studio-o5vi.onrender.com"
+    ? "https://glamour-studio-1.onrender.com"
+    : "https://glamour-studio-1.onrender.com";
 
     // Helper function for robust notifications
     function showNotification(title, text, icon) {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (result.isConfirmed) {
             try {
-                const response = await fetch(`http://localhost:3000/api/bookings/${bookingId}`, {
+                const response = await fetch(`https://glamour-studio-1.onrender.com/api/bookings/${bookingId}`, {
                     method: 'DELETE',
                     credentials: 'include'
                 });
